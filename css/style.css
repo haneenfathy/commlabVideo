@@ -1,0 +1,48 @@
+/* This is where the real beauty is! */
+
+
+.finger-print{
+  position:absolute;
+  height:40vmin;
+  width:20vmin;
+  border:2px solid black;
+  border-radius:20vmin;
+  top:calc(50vh - 20vmin);
+  left:calc(50vw - 10vmin);
+  overflow:hidden;
+}
+svg{
+  margin:0 -20vmin;
+  height:40vmin;
+  width:60vmin;
+  stroke-dasharray:0;
+  cursor:pointer;
+}
+svg:hover{
+  animation: dash 2s ease-out;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 0;
+  }
+  50% {
+    stroke-dasharray: 150;
+  }
+  100% {
+    stroke-dasharray: 0;
+  }
+}
+
+.flex {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#text {
+
+  font-size: 3em;
+  font-family: 'DM Mono', monospace;
+}
