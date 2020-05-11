@@ -1,5 +1,16 @@
 /* This is where the real beauty is! */
 
+* {
+  cursor:url(magnifying-glass.png), auto;
+}
+body {
+background-color: #D3D3D3;
+  margin: 0;
+  overflow-x: hidden;
+}
+#scroll-y {
+  position: fixed;
+}
 
 .finger-print{
   position:absolute;
@@ -33,7 +44,10 @@ svg:hover{
     stroke-dasharray: 0;
   }
 }
+#fix {
 
+  margin-bottom: -15px;
+}
 .flex {
 
   display: flex;
@@ -41,8 +55,155 @@ svg:hover{
   justify-content: center;
 }
 
-#text {
+#text, #enterName{
 
   font-size: 3em;
   font-family: 'DM Mono', monospace;
+}
+
+#hello {
+font-size: 4em;
+font-family: 'DM Mono', monospace;
+padding-right:30px;
+/*animation: type 2s steps(7);
+
+animation-duration: 3s;
+animation-delay: 1s;*/
+
+overflow: hidden;
+white-space: nowrap;
+/*border-right: 3px solid black;*/
+/*width: 5ch;*/
+
+
+}
+#data {
+font-size: 4em;
+font-family: 'DM Mono', monospace;
+color: red;
+
+}
+
+.heading {
+  font-size: 5em;
+font-family: 'DM Mono', monospace;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+}
+.video {
+
+  height: 100vh;
+}
+.greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  height: 100vh;
+}
+
+.name {
+
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  height: 100vh;
+
+
+}
+span {
+
+  color: red;
+}
+
+p {
+
+/*  color:#333333;*/
+}
+
+#myBtn {
+
+  display: none;
+}
+input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid red;
+  padding: 10px;
+  width: 20%;
+}
+
+
+@keyframes type {
+
+  0%{
+    width: 0ch;
+  }
+  100% {
+
+    width: 7ch;
+  }
+}
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }

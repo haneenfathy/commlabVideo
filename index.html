@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 
 <html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script type="text/javascript" src="js/script.js"></script>
+
+</head>
 <body onload="typeWriter()">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&display=swap" rel="stylesheet">
-<!-- <div class="bg"></div> -->
+
+
+<div class="bg"></div>
 <div class="flex">
 	<p id="text"></p>
 </div>
 
 
-<script>
-var i = 0;
-var j= 0;
-var txt = 'WELCOME PLEASE SCAN FOR SECURITY CLEARANCE. ';
-var speed = 150;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("text").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-
-</script>
 
 <!-- finerprint animation from: https://codemyui.com/fingerprint-scan-animation/ -->
 <a href="video.html">
