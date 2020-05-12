@@ -11,8 +11,10 @@ window.onload=function(){
 	   document.getElementById("myBtn").click();
 	  }
 	});
-
 }
+
+
+
 function openNav() {
 	console.log("open");
   document.getElementById("myNav").style.height = "100%";

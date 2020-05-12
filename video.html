@@ -8,20 +8,19 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/script_poll.js"></script>
 </head>
 
 
 
-<body  >
-<div id="myNav" class="overlay">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<div class="overlay-content">
-	    <a href="#">About</a>
-	    <a href="#">Contact</a>
-	</div>
+<body >
+
+<a href="about.html">
+	<button class="menu-open"   type="button">
+</button>
 	
-</div>
-<span onclick="openNav()">open</span>
+</a>
+
 
 	<div class="name">
 
@@ -59,7 +58,7 @@
 		</p>
 		
 </div>
-<div    class="heading">
+<div class="heading">
 
 		<p id="fix" data-aos-duration="5000" data-aos="zoom-in-up">
 			WATCH THIS VIDEO
@@ -77,10 +76,46 @@
 
 <div class="video">
 
+	<div class="border">
 
+		<div class="player">
+			
+		</div>
+		<iframe width="1008" height="540" src="https://www.youtube.com/embed/NTMrfTslKZY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
 	
 </div>
 
+<div id="solution">
+  
+  <div id="final">
+    
+  </div>
+  <div id="time">
+  	
+  </div>
+</div>
+<div class="poll">
+  <div data-aos="fade-right" class="card">
+    <img src="img/haneen.png" height="350px">
+    <button id="haneen" type="button" onclick="pollHaneen()">
+    	KILLER
+    </button>
+  </div>
+  <div data-aos="fade-up" class="card">
+    <img src="img/dania.png" height="350px">
+    <button id="dania" type="button" onclick="pollDania()">
+    	KILLER	
+    </button>
+  </div>
+  <div "fade-right" class="card">
+    <img src="img/logaine.png" height="350px">
+    <button id="logaine" type="button" onclick="pollLogaine()">
+    	KILLER
+    </button>
+  </div>
+  
+</div>
 
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

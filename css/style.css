@@ -2,6 +2,7 @@
 
 * {
   cursor:url(img/magnifying-glass.png), auto;
+  font-family: 'DM Mono', monospace;
 }
 body {
 background-color: #D3D3D3;
@@ -58,58 +59,22 @@ svg:hover{
 #text, #enterName{
 
   font-size: 3em;
-  font-family: 'DM Mono', monospace;
 }
 
 #hello {
 font-size: 4em;
-font-family: 'DM Mono', monospace;
 padding-right:30px;
-/*animation: type 2s steps(7);
-
-animation-duration: 3s;
-animation-delay: 1s;*/
-
 overflow: hidden;
 white-space: nowrap;
-/*border-right: 3px solid black;*/
-/*width: 5ch;*/
-
-
 }
+
 #data {
 font-size: 4em;
-font-family: 'DM Mono', monospace;
 color: red;
-
-}
-.card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-.card__face {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-.card__face--front {
-  background: red;
 }
 
-.card__face--back {
-  background: blue;
-  transform: rotateY( 180deg );
-}
-.card.is-flipped {
-  transform: rotateY(180deg);
-}
 .heading {
   font-size: 5em;
-font-family: 'DM Mono', monospace;
 display: flex;
   justify-content: center;
   align-items: center;
@@ -117,11 +82,16 @@ display: flex;
   height: 100vh;
 
 }
-.video {
 
-  height: 100vh;
+.card , .about{   
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 40px;
 }
-.greeting {
+
+.greeting, .video , .poll {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,27 +100,29 @@ display: flex;
   height: 100vh;
 }
 
+.poll {
+
+  height: 700px;
+}
+
 .name {
 
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-
   height: 100vh;
-
-
 }
-span {
+span , #back {
 
   color: red;
 }
+#back {
 
-p {
-
-/*  color:#333333;*/
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
 }
-
 #myBtn {
 
   display: none;
@@ -170,58 +142,61 @@ input{
   perspective: 600px;
 }
 
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-  height: 0;
-  width: 100%;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+
+
+.border {
+
+  border: 5px solid red;
+  width: 70%;
+  height: 70%;
 }
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
+#haneen , #dania , #logaine {
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
+  background-color: transparent;
   text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+  color: red;
+  border: 4px white solid;
+  font-size: 4em;
+
+  margin-top: 10px;
+
+  cursor: pointer;
+
 }
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+#solution {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+#final {
+
+  margin-top: 60px;
+  font-size: 3em;
+  color: red;
+
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+#time {
+
+  margin-top: 70px;
+  margin-left: 30px;
+  text-decoration: underline;
+}
+
+.menu-open {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: fixed;
+
+  background-image: url("img/circle.png");
+  border: none;
+  background-size: cover;
+
 }
