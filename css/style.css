@@ -1,7 +1,7 @@
 /* This is where the real beauty is! */
 
 * {
-  cursor:url(magnifying-glass.png), auto;
+  cursor:url(img/magnifying-glass.png), auto;
 }
 body {
 background-color: #D3D3D3;
@@ -83,7 +83,30 @@ font-family: 'DM Mono', monospace;
 color: red;
 
 }
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.card__face--front {
+  background: red;
+}
 
+.card__face--back {
+  background: blue;
+  transform: rotateY( 180deg );
+}
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
 .heading {
   font-size: 5em;
 font-family: 'DM Mono', monospace;
@@ -140,16 +163,11 @@ input{
   width: 20%;
 }
 
+.container {
 
-@keyframes type {
-
-  0%{
-    width: 0ch;
-  }
-  100% {
-
-    width: 7ch;
-  }
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
 }
 
 .overlay {
